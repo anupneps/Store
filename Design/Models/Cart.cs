@@ -4,6 +4,7 @@
     {
         public List<Product> Products = new List<Product>();
         public User User;
+        public int Quantity { get; set; }
         
         public void AddProduct(Product product)
         {

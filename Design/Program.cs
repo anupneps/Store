@@ -4,21 +4,12 @@ using Store.Controllers;
 using Store.Models;
 using Store.Services;
 
+var dummyProductGenerator = new ProductGenerator();
+var dummyUserGenerator = new UserGenerator();
 
-Console.WriteLine("Welcome to My Store !");
-Console.WriteLine("// LoginDetails: 'Email': Doe@mail.com, 'Password':1234 // ");
+var productProvider = new ProductProvider(dummyProductGenerator);
+var userProvider = new UserProvider(dummyUserGenerator);
 
-var uservalidation = new UserValidation();
-Utility.BorderLine();
-uservalidation.ValidateEmail();
-uservalidation.ValidatePassword();
-
-Console.WriteLine();
-Console.WriteLine($"Welcome + {uservalidation.currentUser.Name}");
-Console.WriteLine();
-
-// var userInterface = new UserInterface();
+var userInterface = new UserInterface(productProvider, userProvider);
 userInterface.Dashborad();
 
-
-Console.WriteLine("Thank you! Have a nice day !");

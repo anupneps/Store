@@ -17,5 +17,10 @@ namespace Store.Models
             Id = id;
             Name = name;
         }
+
+        public override string ToString()
+        {
+            return ($"Id: {Id}, Name: {Name}");
+        }
     }
 }

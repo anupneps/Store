@@ -8,13 +8,13 @@ namespace Store.Models
 {
     public class Product
     {
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Title { get; set; }
         public int Price { get; set; }
         public string Description { get; set; }
-        public List<Category> Categories { get; set; } 
-        // public Cart CartItem { get; set; }
-
+        public List<Category> Categories { get; set; }
+        public int Quantity { get; set; }
+        
         public Product(int id, string title, int price, string description)
         {
             Id = id;
@@ -22,6 +22,7 @@ namespace Store.Models
             Price = price;
             Description = description;
             Categories = new List<Category>();
+            Quantity = 1;
         }
 
         public void AddCategory(Category category)
@@ -34,15 +35,21 @@ namespace Store.Models
         public void AddCategories(List<Category> categories)
         {
             foreach(var category in categories) { AddCategory(category);}
-            //Categories.AddRange(categories);
+        }
+
+        public void GetCategories()
+        {
+            foreach (var category in Categories ) 
+            {
+                Console.WriteLine(category);
+            }
         }
 
         public override string ToString()
         {
-            return $" Id : {Id}, Title: {Title}, Price: {Price}, Description: {Description}, Categories: {Categories}";
+            var category = string.Join(", ", Categories);
+            return $" Id : {Id}, Title: {Title}, Price: {Price}, Description: {Description}, Categories: {category}";
         }
-
-
     }
 
 
