@@ -1,25 +1,25 @@
-# Design Backend structure using CSharp
+﻿# A E-commerce console app 
 
-In this assignment, you are required to design structure and hierachy for a backend service. you can choose between two topics:
+This project is a replica of simple ecommerce application in console. The console app has login features, a dashboard to select multiple option such as show all products, add to cart, view cart and view user profile. 
 
-1. E-commerce platform
-2. Library Management
 
-You will decide to whether use class/interface/struct for each situation.
+## Project Structure
 
-## Library management system suggestions (or come up with your own design)
-
-- User (consider different types of User)
-- Book
-- Category
-- Author
-- Cart
-- Optional: Review
-
-## Ecommerce Website suggestions (or come up with your own design)
-
-- User (consider different types of User)
-- Product
-- Category
-- Cart
-- Optional: Review
+│   Program.cs
+│   Design.csproj
+│
+├───Controllers
+│       ProductGenerator.cs
+│       ProductProvider.cs
+│       UserGenerator.cs
+│       UserProvider.cs
+│       
+├───Models
+│       Cart.cs
+│       Category.cs
+│       Product.cs
+│       User.cs
+│
+└───Services
+        UserInterface.cs
+        Utility.cs
