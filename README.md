@@ -4,7 +4,7 @@ This project is a replica of simple ecommerce application in console. The consol
 
 
 ## Project Structure
-
+```
 │   Program.cs
 │   Design.csproj
 │
@@ -23,3 +23,4 @@ This project is a replica of simple ecommerce application in console. The consol
 └───Services
         UserInterface.cs
         Utility.cs
+```

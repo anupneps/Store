@@ -9,7 +9,7 @@ namespace Store.Models
 
     public class Category
     {
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Name { get; set; }
 
         public Category(int id, string name)
